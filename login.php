@@ -1,29 +1,40 @@
 <?php
-$traceback='';
-if(isset($_POST["who"]) && isset($_POST["pass"])){
-if(strlen($_POST["who"])< 1 || strlen($_POST["pass"]) < 1) {
-    $traceback="User name and password are required";
-    
+if(isset($_POST['cancel'])) {
+    header('location:http://localhost/index.php');
+    return;
 }
+$traceback='';
+$salt = 'XyZzy12*_';
+$stored_hash = '1a52e17fa899cf40fb04cfc42e6352f1';
+if(isset($_POST["who"]) && isset($_POST["pass"])){
+    if(strlen($_POST["who"])< 1 || strlen($_POST["pass"]) < 1) {
+        $traceback="User name and password are required";   
+    } else {
+        $md5 = hash("md5","$salt".$_POST['pass']);
+
+        if($md5==$stored_hash){
+            header("location: http://localhost/game.php?name=".urlencode($_POST['who']));
+            return;
+        }
+        else {
+            $traceback = "Incorrect password";
+        }  
+    }
 }
 
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<head>    <title>Log In</title>
 </head>
 <body>
-<form method="POST">
 <h2>Please log in</h2>
 <?php
  if (strlen($traceback) > 0) {
      echo("<p style='color: red'>".htmlentities($traceback)."</p><br>");
  }
 ?>
+<form method="post">
 <label for="username">USERNAME</label>
 <input type="text" name="who" id="username" ><br>
 <label for="key">PASSWORD</label>
