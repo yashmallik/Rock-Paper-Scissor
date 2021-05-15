@@ -1,0 +1,9 @@
+@import"https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap";
+body {
+    background-color: thistle;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600
+}
