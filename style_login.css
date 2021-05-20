@@ -1,34 +1,61 @@
-    @import"https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap";
-    body {
-        background-color: thistle;
-    }
+  @import"https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap";
+body {
+    background-color:rgb(221, 198, 178);
+    text-align: center;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+h2{
+    text-align: center;
+    padding-top: 40px;
+}
+form{
+    background-color: #bbf0f3;
+    background-image: linear-gradient(315deg, #bbf0f3 0%, #f6d285 74%);    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    border: solid gray .50px;
+    margin-left: 35%; 
+    margin-right: 35%; 
+    padding-bottom: 20px;
+    padding-top: 20px;
+} 
+.box{
+    border: none;
+    text-decoration: none;
+    background: azure;   
+    width: 70%;
+    height: 20px;
+    margin-top: 5px;
+
+}
+
+ .button {
     
-    * {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600 \[[\]]
-    }
-    
-    .button {
-        width: 20%;
-        padding: 10px 30px;
-        cursor: pointer;
-        display: block;
-        margin-left: 30px;
-        margin-top: 30px;
-        background-image: linear-gradient(to right, #895cf2 0%, #ffabf4 100%, #895cf2 100%);
-        outline: none;
-        border: 0;
-        border-radius: 30px;
-        color: white;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 20px;
-        text-transform: uppercase;
-    }
-    
-    .button:hover {
-        transition: 0.1s;
-        padding: 11px;
-        box-shadow: 5px 5px 10px rgba(50, 50, 93, 0.50), 10px 10px 10px rgba(0, 0, 0, 0.08);
-        text-decoration: unset;
-        background-image: linear-gradient(to right, #895cf2 80%, #ffabf4 50%, #895cf2 20%);
-    }
+    width: 50%;
+    padding: 10px;
+    cursor: pointer;
+    display: block;
+    margin-top: 20px; 
+    background-image: linear-gradient(to right, #00b7c2 20%, #4ef037 90%);
+    outline: none;
+    border: 0;
+    border-radius: 30px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 100%;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    transition: 0.1s;
+    padding: 11px;
+    box-shadow: 5px 5px 10px rgba(50, 50, 93, 0.50), 10px 10px 10px rgba(0, 0, 0, 0.08);
+    text-decoration: unset;
+    background-image: linear-gradient(to left, #00b7c2 100%, #4ef037 90%);
+}
+  
