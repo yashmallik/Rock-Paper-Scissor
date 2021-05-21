@@ -37,7 +37,7 @@ if(isset($_POST["who"]) && isset($_POST["pass"])){
  }
 ?> 
 
-<form method="post">
+<form method="POST">
 <label for="username">USERNAME</label>
 <input type="text" name="who" id="username" class="box" ><br>
 <label for="key">PASSWORD</label>
