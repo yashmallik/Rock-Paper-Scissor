@@ -50,5 +50,4 @@ for($c=0;$c<3;$c++){
     </form>
 </body>
 </html>
-<?php print_r("$_POST"); 
-?>
+
